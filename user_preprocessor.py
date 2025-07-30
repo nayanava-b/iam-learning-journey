@@ -1,4 +1,4 @@
-users = [ #Sample user data to be processed
+users = [  # Sample user data to be processed
     {
         "firstName": "Nayanava",
         "lastName": "Biswas",
@@ -22,23 +22,24 @@ users = [ #Sample user data to be processed
     }
 ]
 
-region_map = { #Key-value pairs to map the location of the user to a region
+region_map = {
     "IN": "India",
-    "US": "United States",
+    "US": "United States"
 }
-deptcode_map = { #Key-value pairs to map the department of the user to a department code
+deptcode_map = {
     "Engineering": "ENG",
     "Consulting": "CNS"
 }
 
 def preprocessor(user):
-    location = user.get("location") #To bring in the location of the user within the scope of the preprocessor
+    location = user.get("location")
     department = user.get("department")
     projectCode = user.get("projectCode")
     region = region_map.get(location, "Global")
     dept_code = deptcode_map.get(department, "GENERAL")
-    if projectCode is not None:
-        if projectCode.startswith("Z"): #To map the condition for generation of project groups
+    
+    if projectCode:
+        if projectCode.startswith("Z"):
             project_group = "Zeta"
         elif projectCode.startswith("A"):
             project_group = "Alpha"
@@ -54,13 +55,9 @@ def preprocessor(user):
         "dept_code": dept_code,
         "project_group": project_group
     }
-    project_group = enriched['project_group']
-    dept_code = enriched['dept_code']
-    first_name = enriched['firstName']
-    last_name = enriched['lastName']
-    region = enriched['region']
-    user_tag = f"{project_group}-{dept_code}{first_name}.{last_name}@{region}"
-    print(user_tag)
-    enriched = preprocessor(user) #Variable to call the preprocessor function on each user
+
+# Generate user tags and print
+for user in users:
+    enriched = preprocessor(user)
     user_tag = f"{enriched['project_group']}-{enriched['dept_code']}{enriched['firstName']}.{enriched['lastName']}@{enriched['region']}"
     print(user_tag)
