@@ -1,0 +1,42 @@
+[
+   {
+      "username": "Ajay",
+      "country": "IN",
+      "is_admin": true
+   },
+   {
+      "username": "Karen",
+      "country": "US",
+      "is_admin": false
+   },
+   {
+      "username": "Fahmie",
+      "country": "FR",
+      "is_admin": false
+   },
+   {
+      "username": "Ajay",
+      "country": "IN",
+      "is_developer": false
+   },
+   {
+      "username": "Karen",
+      "country": "US",
+      "is_developer": true
+   },
+   {
+      "username": "Ajay",
+      "location": "IN",
+      "transformed_role": "SYSTEM-ADMIN"
+   },
+   {
+      "username": "Karen",
+      "location": "US",
+      "transformed_role": "ENG-DEV"
+   },
+   {
+      "username": "Fahmie",
+      "location": "FR",
+      "transformed_role": "TEMP-CONTRACT"
+   }
+]
