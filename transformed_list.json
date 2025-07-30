@@ -1,0 +1,17 @@
+[
+   {
+      "username": "Ajay",
+      "location": "IN",
+      "transformed_role": "SYSTEM-ADMIN"
+   },
+   {
+      "username": "Karen",
+      "location": "US",
+      "transformed_role": "ENG-DEV"
+   },
+   {
+      "username": "Fahmie",
+      "location": "FR",
+      "transformed_role": "TEMP-CONTRACT"
+   }
+]

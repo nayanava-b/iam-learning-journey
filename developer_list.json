@@ -1,0 +1,12 @@
+[
+   {
+      "username": "Ajay",
+      "country": "IN",
+      "is_developer": false
+   },
+   {
+      "username": "Karen",
+      "country": "US",
+      "is_developer": true
+   }
+]
